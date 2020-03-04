@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div class="container-fluid">
 		<header class="row">
 			<div class="col-md-6">
 				<a  href="<?php echo get_site_url();?>">
@@ -35,7 +35,7 @@
 					<li><a href="index.html">Services</a></li>
 				</ul> -->
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'book' ); ?></button>
+					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'book' ); ?></button> -->
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -45,7 +45,5 @@
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
-
 		<hr>
-      	<div class="row">
-        	<div class="col-lg-12 col-md-12 columns">
+    <div>
