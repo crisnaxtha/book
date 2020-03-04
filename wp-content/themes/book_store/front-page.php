@@ -12,10 +12,11 @@
                 while($home_books->have_posts()) {
                     $home_books->the_post();?>
 
-                     <div class="col-lg-3 col-md-3 col-xs-12 product end">
-                        <h3><?php the_title(); ?></h3>
-                        <?php the_post_thumbnail( 'square-150' ); ?>
-                        <a class="btn btn-primary btn-xs" href="<?php the_permalink(); ?>">Details</a>
+                    <div class="col-lg-3 col-md-3 col-xs-12 product end">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail( 'square-150' ); ?>
+                            <h3><?php the_title(); ?></h3>
+                        </a>
                     </div>
 
                 <?php 
