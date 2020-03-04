@@ -42,8 +42,9 @@
 						'menu_id'        => 'primary-menu',
 					) );
 					?>
-				</nav><!-- #site-navigation -->
+				</nav>
+				<?php get_search_form(true) ; ?>
 			</div>
-		</header><!-- #masthead -->
+		</header>
 		<hr>
     <div>
