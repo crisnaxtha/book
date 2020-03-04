@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<!-- <?php get_header(); ?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 columns">
@@ -37,4 +37,4 @@
         </div>
     </div>   
 </div>
-<?php get_footer(); ?>
+<?php get_footer(); ?> -->

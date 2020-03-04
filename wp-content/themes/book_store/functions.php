@@ -79,6 +79,8 @@ if ( ! function_exists( 'book_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		add_image_size( 'square-150', 150, 150, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'book_setup' );
@@ -106,3 +108,22 @@ function book_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'book_scripts' );
+
+function book_post_type() {
+    register_post_type('book', array(
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'rewrite' => array('slug' => 'books'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Books', 
+            'add_new_item' => 'Add New Book',
+            'edit_item' => 'Edit Book',
+            'all_items' => 'All Books',
+            'singular_name' => 'Book'
+        ),
+        'description' => "Add Books",
+        'menu_icon' => 'dashicons-book-alt'
+    ));
+}
+add_action('init', 'book_post_type');
