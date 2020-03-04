@@ -2,25 +2,28 @@
 
 <div class="row">
         <div class="col-lg-12 col-md-12 columns">
-          <div class="single-product">
-            <div class="col-lg-12 col-md-12 col-xs-12 columns product end">
-            <div class="col-lg-5 col-md-5 col-xs-5 columns product end">
-            <a href="index.html">Go Back</a>
-              <img src="./img/img-1.png">
+            <div class="single-product">
+            <?php
+            while(have_posts()) {
+                the_post(); ?>
+              <div class="col-lg-12 col-md-12 col-xs-12 columns product end">
+                <div class="col-lg-5 col-md-5 col-xs-5 columns product end">
+                <?php the_post_thumbnail( 'square-150' ); ?>
+                </div>
+                <div class="col-lg-7 col-md-7 col-xs-7 columns product end">
+                    <h2><?php the_title(); ?></h2>
+                    <h4>Author: <?php the_field('author'); ?></h4>
+                    <h5>Price: $<?php the_field('price_'); ?></h5>
+                    <?php the_content(); ?>
+                    <button class="btn btn-primary btn-xs">Buy Now</button>
+
+                </div>   
+              </div>  
+            <?php } ?>     
             </div>
-            <div class="col-lg-7 col-md-7 col-xs-7 columns product end">
-              <h2>Blue & White Shirt</h2>
-              <h4>Author: Lochan</h4>
-              <h5>Price: $9.99</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et nunc ipsum. Aliquam tincidunt iaculis massa eget venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Cura</p>
-              <button class="btn btn-primary btn-xs">Buy Now</button>
-              <hr>
-              <p class="tags"><strong>Tags:</strong> Shirt, Blue Shirt, White Shirt</p>
-            </div>   
-            </div>       
-          </div>
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-lg-12 col-md-12 columns">
           <div class="products">

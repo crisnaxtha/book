@@ -14,7 +14,6 @@
 
                      <div class="col-lg-3 col-md-3 col-xs-12 product end">
                         <h3><?php the_title(); ?></h3>
-                        <h4>$9.99</h4>
                         <?php the_post_thumbnail( 'square-150' ); ?>
                         <a class="btn btn-primary btn-xs" href="<?php the_permalink(); ?>">Details</a>
                     </div>
