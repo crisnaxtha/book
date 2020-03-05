@@ -12,9 +12,13 @@
             </div>
             <div class="col-lg-7 col-md-7 col-xs-7 columns product end">
                 <h2><?php the_title(); ?></h2>
+                <div class="pull-right">
+                <h5>Price: $<?php the_field('price_'); ?></h5>
+                </div>
                 <h4>Author: <?php the_field('author'); ?></h4>
                 <h5>Publisher: <?php the_field('publisher') ?>( <?php the_field('year_of_publication') ?>)</h5>
-                <h5>Price: $<?php the_field('price_'); ?></h5>
+                <hr>
+                
                 <?php the_content(); ?>
 
             </div>   
